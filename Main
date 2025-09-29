@@ -1,0 +1,55 @@
+
+package myPackage;
+
+public class Main {
+ public static void main(String[] args) {
+        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        list.addLast(40);
+
+        System.out.println("Original List:");
+        list.printList();
+
+        // Test Part 1 methods
+        list.addFirst(5);
+        list.addLast(50);
+        System.out.println("After addFirst(5) and addLast (50) in the list:");
+        list.printList();
+
+        list.insertAtIndex(2, 15);
+        System.out.println("After insertAtIndex(2,15):");
+        list.printList();
+
+        list.deleteAtIndex(3);
+        System.out.println("After deleteAtIndex(3):");
+        list.printList();
+
+        System.out.println("The list contains 30? " + list.contains(30));
+        System.out.println("Get index 2 value: " + list.get(2));
+        System.out.println("Current size: " + list.size());
+
+        list.reverse();
+        System.out.println("After reverse:");
+        list.printList();
+        System.out.println();
+
+        // Test Part 2 swapNodes
+        list.swapNodes(0, list.size() - 1);
+        System.out.println("After swapping head and tail:");
+        list.printList();
+
+        list.swapNodes(1, 2);
+        System.out.println("After swapping adjacent nodes (1,2):");
+        list.printList();
+
+        list.swapNodes(1, 3);
+        System.out.println("After swapping nodes (1,3):");
+        list.printList();
+
+    }
+}
+    
+    
